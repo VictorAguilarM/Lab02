@@ -10,9 +10,9 @@ public class WordCounter {
         int bool=0;
 
         for(int i=0; i<phrase.length(); i++){
-            if(phrase.charAt(i)==' '){
+            if(phrase.charAt(i)==' ' || phrase.charAt(i)==',' || phrase.charAt(i)=='.'){
                 bool=0;
-            } else if(phrase.charAt(i)!=' ' && bool==0){
+            } else if((phrase.charAt(i)!=' ' || phrase.charAt(i)==',' || phrase.charAt(i)=='.') && bool==0){
                 count++;
                 bool=1;
             }
